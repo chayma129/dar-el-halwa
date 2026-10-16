@@ -49,7 +49,7 @@ title="+216 suivi de 8 chiffres" placeholder="+21622550211" required>
                 </p>
                 <p>
                     <label for="code-postal">Code-postal:</label>
-            <input type="text" id="code-postal" name="code-postal" pattern="[0-9]{4}" title="4 chiffres" required >
+            <input type="text" id="code-postal" name="code-postal" placeholder="3000" pattern="[0-9]{4}" title="4 chiffres" required >
                 </p>
                  <p>
                 <label for="adresse">Adresse de livraison</label>
@@ -72,21 +72,24 @@ title="+216 suivi de 8 chiffres" placeholder="+21622550211" required>
                 <fieldset>
                     <legend>occasion</legend>
                     <p>
-                        <label for="occ-anniversaire"> anniversaire</label>
-                        <input type="radio" id="occ-anniversaire" name="occation" value="anniversaire" required>
+                       
+                        <input type="radio" id="occ-anniversaire" name="occasion" value="anniversaire" required>
+                         <label for="occ-anniversaire"> anniversaire</label>
+                    </p>
+                    <p>
                         
-                    </p>
-                    <p>
-                        <label for="occ-mariage">mariage</label>
                         <input type="radio" name="occasion" id="occ-mariage" value="mariage" required>
+                        <label for="occ-mariage">mariage</label>
                     </p>
                     <p>
-                        <label for="occ-fiancailles">occ-fiancailles</label>
+                        
                         <input type="radio" name="occasion" id="occ-fiancailles" value="fiancailles">
+                        <label for="occ-fiancailles">fiancailles</label>
                     </p>
                     <p>
+                        
+                        <input type="text" name="autre" id="autre" placeholder="autre">
                         <label for="autre">autre:</label>
-                        <input type="text" name="autre" id="autre" value="autre">
                     </p>
                     
                 </fieldset>
@@ -102,20 +105,24 @@ title="+216 suivi de 8 chiffres" placeholder="+21622550211" required>
                     <fieldset>
                         <legend>Parfums souhaités</legend>
                         <p>
-                            <label for="parfum-chocolat">chocolats</label>
+                            
                             <input type="checkbox" name="Parfums[]" id="parfum-chocolat" checked>
+                            <label for="parfum-chocolat">chocolats</label>
                         </p>
                         <P>
-                           <label for="parfum-vanilles">vanilles</label>
+                           
                             <input type="checkbox" name="Parfums[]" id="parfum-vanilles" checked> 
+                            <label for="parfum-vanilles">vanilles</label>
                         </P>
                         <p>
-                            <label for="parfum-pistache">pistache</label>
+                            
                             <input type="checkbox" name="Parfums[]" id="parfum-pistache" checked>
+                            <label for="parfum-pistache">pistache</label>
                         </p>
                         <p>
-                            <label for="parfum-fruits-rouge">fruit rouge</label>
+                            
                             <input type="checkbox" name="Parfums[]" id="parfum-fruits-rouge" checked>
+                            <label for="parfum-fruits-rouge">fruit rouge</label>
                         </p>
                         
                     </fieldset>
