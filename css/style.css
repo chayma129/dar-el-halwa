@@ -32,6 +32,8 @@ footer{
     background-color: var(--chocolat);
     text-align: center;
     padding: var(--espace);
+    text-decoration: var(--miel);
+
 }
 p, li{
     line-height: 1.6;
@@ -63,10 +65,22 @@ a:active{
     margin: 30px;
 }
 body{
-    font-family :system-ui ,Arial, sans-serif;
-    line-height: 1.6;
-    font-size: 1rem;
+    display: grid;
+grid-template-areas:
+"entete"
+"navigation"
+"contenu"
+"pied";
+grid-template-rows: auto auto 1fr auto;
+min-height: 100vh;
+max-width: 1100px;
+margin: 0 auto;
 }
+header { grid-area: entete; }
+nav { grid-area: navigation; }
+main { grid-area: contenu; }
+footer { grid-area: pied; }
+
 
     table {
     border-collapse: collapse;
@@ -92,3 +106,86 @@ caption{
     font-style:italic;
     padding-top: 8px;
 }
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: var(--espace);
+    list-style: none;
+}
+nav a{
+    display:block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: var(--pistache);
+} 
+footer h3{
+    color: aliceblue;
+
+}
+footer p{
+    color: #6b8e4e;
+}
+footer a:hover{
+    color: var(--miel);
+}
+footer { display: flex; gap: calc(var(--espace) * 2); 
+}
+footer > div { flex: 1; 
+}
+.grille-produits {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.5rem;
+list-style: none;
+padding: 0;
+}
+.carte{
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.8);
+}
+.carte{
+    display: flex;
+    flex-direction: column;
+}
+.carte .prix {
+    margin-top: auto;
+}
+.grille-produits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+footer {
+  display: flex;
+  flex-direction: column;   
+  gap: 16px;
+}
+img, video {
+  max-width: 100%;              
+  height: auto;
+}
+@media (min-width: 768px) {
+  .grille-produits {
+    grid-template-columns: repeat(2, 1fr);   
+  }
+
+  footer {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .grille-produits {
+    grid-template-columns: repeat(3, 1fr);  
+} 
+}
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;}
